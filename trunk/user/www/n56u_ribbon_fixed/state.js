@@ -377,7 +377,7 @@ function show_banner(L3){
 	show_top_status();
 }
 
-//new MENU 2021-1-2 17:47 by xtr3mz
+//new MENUS 2021-1-2 14:55
 var tabM0=[
 	{"title":"<#menu5_1_1#>","link":"Advanced_Wireless2g_Content.asp"},
 	{"title":"<#menu5_1_2#>","link":"Advanced_WGuest2g_Content.asp"},
@@ -471,7 +471,6 @@ var menuL1=[
 	{"title":"插件","link":"javascript:;","icon":"icon-wrench","sub":"plugin"}
 ];
 //Level 2 Menu
-//sub 与 L1的sub 对应，自动显示到L1下面
 var menuL2=[
 	{"title":"<#menu5_11#>","link":tabM[0][0].link,"sub":"main"},
 	{"title":"<#menu5_12#>","link":tabM[1][0].link,"sub":"main"},
@@ -488,7 +487,7 @@ var menuL2=[
 /* plugin menu 插件菜单 */
 if (found_app_scutclient()){
 	var mx={"title":"<#menu5_13#>","link":"scutclient.asp","sub":"plugin"};//json格式
-	var mx2=[mx,{"title":"log","link":"scutclient_log.asp"}];//显示tab，多个页面
+	var mx2=[mx,{"title":"log","link":"scutclient_log.asp"}];//多个页面
 	menuL2.push(mx);//必须写
 	tabM.push(mx2);//必须写
 }
@@ -608,7 +607,7 @@ function show_menu(L1, L2, L3){
 		
 		if(title1 == ""){continue;}
 		if(typeof sub1 !="undefined" && sub1 != ""){
-			//L2 ，根据sub属性，显示到L1的下面
+			//L2
 			for(var j = 0; j < menuL2.length; j++){
 				console.log(menuL2[j].sub +"--" + sub1);
 				if (typeof menuL2[j].sub =='undefined' || menuL2[j].sub != sub1) {continue;}
@@ -1380,6 +1379,9 @@ var sc = document.createElement("meta");sc.setAttribute("name", "viewport");sc.s
 var style=document.createElement('style');
 style.type='text/css';
 style.innerHTML="#mainMenu li>i{margin:0 5px 0 0}"
++".side_nav ul li>a{background:#F5F5F5 !important;color:#08c !important;border:none !important;border-radius:0;box-shadow:inset -1px -1px 1px #ccc}"
++".side_nav ul li>a:hover{background:#ddd !important}"
++".side_nav ul li div a{background:#fff}"
 +"#subMenu{display:none}"
 +"@media screen and (max-width:800px){"
 +"#mainMenu .accordion{display:none}"
@@ -1390,11 +1392,11 @@ style.innerHTML="#mainMenu li>i{margin:0 5px 0 0}"
 +".container-fluid{padding:none}"
 +"#TopBanner .span6{width:auto;float:none;margin:5px;}"
 +"#TopBanner .container-fluid{padding:0;margin:0}"
-+"#logo{height:50px;margin:-8px auto -12px auto;z-index:-1;}"
++"#logo{height:50px;margin:-5px auto -18px auto;}"
 +".row-fluid>.span3,.row-fluid>.span9{float:none;width:auto;margin:0}"
 //*menu*/
 +".sidebar-nav.side_nav,#mainMenu{padding:none;background:none}"
-+"#mainMenu{margin:0 0 10px;list-style:none;background:none repeat scroll 0 0 #F5F5F5}"
++"#mainMenu{margin:-22px 0 10px 0;list-style:none;background:none repeat scroll 0 0 #F5F5F5}"
 +"#mainMenu li {float: left; width:50%}"
 +"#mainMenu li.active a,#mainMenu li:hover a{background: green;}"
 +"#mainMenu li a{display:block;line-height:30px;text-align:center;border-left:1px solid #ccc;}"
