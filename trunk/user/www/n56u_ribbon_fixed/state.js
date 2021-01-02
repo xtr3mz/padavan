@@ -462,7 +462,7 @@ var tabM=[tabM0,tabM1,tabM2,tabM3,tabM4,tabM5,tabM6,tabM7,tabM8,tabM9];
 //生成子菜单 /L1 sub 与 L2 sub对应
 var menuL1=[
 	{"title":"<#menu1#>","link":"index.asp","icon":"icon-home","sub":"main"},
-	//{"title":"HDD","link":"","icon":"icon-hdd"},
+	//{"title":"Aria","link":"./ariaweb/index.html","icon":"icon-hdd"},
 	//{"title":"","link":"","icon":"icon-retweet"},
 	//{"title":"","link":"","icon":"icon-globe"},
 	{"title":"<#menu4#>","link":"Main_TrafficMonitor_realtime.asp","icon":"icon-tasks"},
@@ -485,6 +485,10 @@ var menuL2=[
 ];
 
 /* plugin menu 插件菜单 */
+if (found_app_aria()){
+	var mx={"title":"Aria","link":"./ariaweb/index.html","sub":"plugin"};//json格式
+	menuL2.push(mx);//必须写
+}
 if (found_app_scutclient()){
 	var mx={"title":"<#menu5_13#>","link":"scutclient.asp","sub":"plugin"};//json格式
 	var mx2=[mx,{"title":"log","link":"scutclient_log.asp"}];//多个页面
@@ -609,7 +613,7 @@ function show_menu(L1, L2, L3){
 		if(typeof sub1 !="undefined" && sub1 != ""){
 			//L2
 			for(var j = 0; j < menuL2.length; j++){
-				console.log(menuL2[j].sub +"--" + sub1);
+				//console.log(menuL2[j].sub +"--" + sub1);
 				if (typeof menuL2[j].sub =='undefined' || menuL2[j].sub != sub1) {continue;}
 				var title2= menuL2[j].title;
 				var link2= menuL2[j].link;
@@ -1379,7 +1383,7 @@ var sc = document.createElement("meta");sc.setAttribute("name", "viewport");sc.s
 var style=document.createElement('style');
 style.type='text/css';
 style.innerHTML="#mainMenu li>i{margin:0 5px 0 0}"
-+".side_nav ul li>a{background:#F5F5F5 !important;color:#08c !important;border:none !important;border-radius:0;box-shadow:inset -1px -1px 1px #ccc}"
++".side_nav ul li>a{background:transparent !important;color:#08c !important;border:none !important;box-shadow:inset -1px -1px 1px #ccc}"
 +".side_nav ul li>a:hover{background:#ddd !important}"
 +".side_nav ul li div a{background:#fff}"
 +"#subMenu{display:none}"
@@ -1397,9 +1401,8 @@ style.innerHTML="#mainMenu li>i{margin:0 5px 0 0}"
 //*menu*/
 +".sidebar-nav.side_nav,#mainMenu{padding:none;background:none}"
 +"#mainMenu{margin:-22px 0 10px 0;list-style:none;background:none repeat scroll 0 0 #F5F5F5}"
-+"#mainMenu li {float: left; width:50%}"
-+"#mainMenu li.active a,#mainMenu li:hover a{background: green;}"
-+"#mainMenu li a{display:block;line-height:30px;text-align:center;border-left:1px solid #ccc;}"
++"#mainMenu li {float: left; width:50%;}"
++"#mainMenu li a{border-radius:none;display:block;line-height:30px;text-align:center}"
 +"#subMenu{clear:both;background:none}"
 +"#subMenu a{display:block;height:30px;overflow:hidden;float:left;width:33.3%;padding:0;line-height:30px}"
 //*body menu*/
