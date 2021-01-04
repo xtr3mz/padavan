@@ -1,4 +1,6 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
+![image](https://github.com/xtr3mz/padavan/raw/master/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
+
 
 以下整理自hanwckf的padavan
 
