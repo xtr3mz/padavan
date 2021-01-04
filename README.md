@@ -1,3 +1,6 @@
+本人的Release中的文件为Newifi3 d2的固件！仅有这个
+以下整理自hanwckf的padavan
+
 ![CI](https://github.com/hanwckf/rt-n56u/workflows/CI/badge.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/hanwckf/rt-n56u/total)
 [![release](https://img.shields.io/github/release/hanwckf/rt-n56u.svg)](https://github.com/hanwckf/rt-n56u/releases)
