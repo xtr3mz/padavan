@@ -175,11 +175,12 @@ sh dl_toolchain.sh
 ```shell
 nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
 ```
-* 清理文件（第一次编译，不需要清理，换路由器型号编译，需要先清理）
+* 清理文件（首次编译无需清理，换路由器型号，需要清理）
 ```shell
 cd /opt/rt-n56u/trunk
 ./clear_tree
 ```
+
 * 开始编译（例如：编译 PSG1218路由固件）
 ```shell
 # 对于WSL环境，建议使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot
@@ -194,3 +195,14 @@ fakeroot ./build_firmware_modify PSG1218
 - https://www.jianshu.com/p/cb51fb0fb2ac
 - https://www.jianshu.com/p/6b8403cdea46
 
+### 图形界面管理 & 编辑文件（root模式）
+* 新装系统需要设root密码，输入命令，然后输入2次密码即可
+```shell 
+sudo passwd
+```
+
+* root模式文件浏览器，在命令窗口输入：
+* debian/ubuntu： sudo nautilus
+* deepin/深度系统：sudo dde-file-manager
+
+* 打开系统盘（ubuntu: 其他位置->我的电脑），在opt里可看到rt-n56u文件夹
