@@ -5,21 +5,16 @@
 # README #
 
 Welcome to the rt-n56u project
-
-This project aims to improve the rt-n56u and other supported devices on the software part, allowing power user to take full control over their hardware.
-This project was created in hope to be useful, but comes without warranty or support. Installing it will probably void your warranty. 
+This project aim to improve rt-n56u like routers's user experience with many addons and improvements.
+Use At Your Own Risk. 
 Contributors of this project are not responsible for what happens next.
+本项目意为改善 rt-n56u 类似型号路由器的使用体验，提供了插件和功能改进。
+总而言之，我们的意图是好的，但是，刷机风险自担（首先确保你刷了breed）。
 
-### How do I get set up? ###
-
-* [Get the tools to build the system](https://bitbucket.org/padavan/rt-n56u/wiki/EN/HowToMakeFirmware) or [Download pre-built system image](https://bitbucket.org/padavan/rt-n56u/downloads)
-* Feed the device with the system image file (Follow instructions of updating your current system)
-* Perform factory reset
-* Open web browser on http://my.router to configure the services
-
-### Contribution guidelines ###
-
-* To be completed
+### Original project here ###
+原始项目地址
+* [Get the tools to build the system](https://bitbucket.org/padavan/rt-n56u/wiki/EN/HowToMakeFirmware) 
+* [Download pre-built system image](https://bitbucket.org/padavan/rt-n56u/downloads)
 
 ***
 
@@ -35,73 +30,72 @@ Contributors of this project are not responsible for what happens next.
 - [curl](https://github.com/curl/curl)可选编译可执行程序 ```CONFIG_FIRMWARE_INCLUDE_CURL```
 - 使用了[PROMETHEUS](http://pm.freize.net/index.html)提供的部分补丁
 - 使用了[Linaro1985/padavan-ng](https://gitlab.com/padavan-ng/padavan-ng)的部分软件包
-- 可选以下插件：
->- [scutclient](https://github.com/hanwckf/scutclient) ```CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT```
->- [gdut-drcom](https://github.com/chenhaowen01/gdut-drcom) ```CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM```
->- [dogcom](https://github.com/hanwckf/dogcom) ```CONFIG_FIRMWARE_INCLUDE_DOGCOM```
->- [minieap](https://github.com/hanwckf/minieap) ```CONFIG_FIRMWARE_INCLUDE_MINIEAP```
->- [njit-client](https://github.com/hanwckf/njit8021xclient) ```CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT```
->- [napt66](https://github.com/mzweilin/napt66) ```CONFIG_FIRMWARE_INCLUDE_NAPT66```
+
+- 可选插件 - 登录客户端：
+>- [scutclient]校园网(https://github.com/hanwckf/scutclient) ```CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT```
+>- [mentohust]锐捷认证(https://github.com/hanwckf/mentohust-1) ```CONFIG_FIRMWARE_INCLUDE_MENTOHUST```
+>- [gdut-drcom]Dr.com(https://github.com/chenhaowen01/gdut-drcom) ```CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM```
+>- [dogcom]Dr.com(https://github.com/hanwckf/dogcom) ```CONFIG_FIRMWARE_INCLUDE_DOGCOM```
+>- [minieap]EAP(https://github.com/hanwckf/minieap) ```CONFIG_FIRMWARE_INCLUDE_MINIEAP```
+>- [njit-client]南京工程 /地址已丢失 (https://github.com/hanwckf/njit8021xclient) ```CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT```
+
+- 可选插件 - 工具：
+>- [ttyd]Webshell(https://github.com/tsl0922/ttyd) ```CONFIG_FIRMWARE_INCLUDE_TTYD```
+>- [lrzsz]兼容x/y/zmodem/文件传输(https://ohse.de/uwe/software/lrzsz.html) ```CONFIG_FIRMWARE_INCLUDE_LRZSZ```
+>- [htop]进程查看(https://hisham.hm/htop/releases/) ```CONFIG_FIRMWARE_INCLUDE_HTOP```
+>- [mtr]网络诊断(https://github.com/traviscross/mtr) ```CONFIG_FIRMWARE_INCLUDE_MTR```
+>- [nano]文本编辑器(https://www.nano-editor.org/dist/) ```CONFIG_FIRMWARE_INCLUDE_NANO```
+>- [iperf3]网络性能测试(https://github.com/esnet/iperf) ```CONFIG_FIRMWARE_INCLUDE_IPERF3```
+>- [socat]多功能网络工具(http://www.dest-unreach.org/socat) ```CONFIG_FIRMWARE_INCLUDE_SOCAT```
+- 可选插件 - 无线电：
+>- [dump1090]Mode S解码器(https://github.com/hanwckf/dump1090) ```CONFIG_FIRMWARE_INCLUDE_DUMP1090```
+>- [rtl-sdr]解码(https://github.com/osmocom/rtl-sdr) ```CONFIG_FIRMWARE_INCLUDE_RTL_SDR```
+- 可选插件 - 工具：
+>- [vlmcsd]KMS /地址已丢失 (https://github.com/hanwckf/vlmcsd) ```CONFIG_FIRMWARE_INCLUDE_VLMCSD```
+>- [samba3.6](https://gitlab.com/padavan-ng/padavan-ng/tree/master/trunk/user/samba36) ```CONFIG_FIRMWARE_INCLUDE_SMBD36```
+
+- 可选插件：
+>- [dns-forwarder](https://github.com/aa65535/hev-dns-forwarder) ```CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER```
+>- [napt66]IPV6端口转发(https://github.com/mzweilin/napt66) ```CONFIG_FIRMWARE_INCLUDE_NAPT66```
 >- [ssr](https://github.com/shadowsocksr-backup/shadowsocksr-libev)/[ss](https://github.com/shadowsocks/shadowsocks-libev) ```CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS```
 >- [ss-server](https://github.com/shadowsocks/shadowsocks-libev) ```CONFIG_FIRMWARE_INCLUDE_SSSERVER```
 >- [softether-vpnserver](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable) ```CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER```
 >- [softether-vpnclient](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable) ```CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT```
 >- [softether-vpncmd](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable) ```CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD```
->- [dns-forwarder](https://github.com/aa65535/hev-dns-forwarder) ```CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER```
->- [vlmcsd](https://github.com/hanwckf/vlmcsd) ```CONFIG_FIRMWARE_INCLUDE_VLMCSD```
->- [ttyd](https://github.com/tsl0922/ttyd) ```CONFIG_FIRMWARE_INCLUDE_TTYD```
->- [lrzsz](https://ohse.de/uwe/software/lrzsz.html) ```CONFIG_FIRMWARE_INCLUDE_LRZSZ```
->- [htop](https://hisham.hm/htop/releases/) ```CONFIG_FIRMWARE_INCLUDE_HTOP```
->- [nano](https://www.nano-editor.org/dist/) ```CONFIG_FIRMWARE_INCLUDE_NANO```
->- [iperf3](https://github.com/esnet/iperf) ```CONFIG_FIRMWARE_INCLUDE_IPERF3```
->- [dump1090](https://github.com/hanwckf/dump1090) ```CONFIG_FIRMWARE_INCLUDE_DUMP1090```
->- [rtl-sdr](https://github.com/osmocom/rtl-sdr) ```CONFIG_FIRMWARE_INCLUDE_RTL_SDR```
->- [samba3.6](https://gitlab.com/padavan-ng/padavan-ng/tree/master/trunk/user/samba36) ```CONFIG_FIRMWARE_INCLUDE_SMBD36```
->- [mtr](https://github.com/traviscross/mtr) ```CONFIG_FIRMWARE_INCLUDE_MTR```
->- [socat](http://www.dest-unreach.org/socat) ```CONFIG_FIRMWARE_INCLUDE_SOCAT```
->- [srelay](https://socks-relay.sourceforge.io) ```CONFIG_FIRMWARE_INCLUDE_SRELAY```
->- [3proxy](https://github.com/z3APA3A/3proxy) ```CONFIG_FIRMWARE_INCLUDE_3PROXY```
->- [mentohust](https://github.com/hanwckf/mentohust-1) ```CONFIG_FIRMWARE_INCLUDE_MENTOHUST```
->- [frpc](https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPC```
->- [frps](https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPS```
->- [tunsafe](https://github.com/TunSafe/TunSafe) ```CONFIG_FIRMWARE_INCLUDE_TUNSAFE```
->- [wireguard-go](https://git.zx2c4.com/wireguard-go/) ```CONFIG_FIRMWARE_INCLUDE_WIREGUARD```
 
-- 已适配除官方适配外的以下机型
->- PSG1208
->- PSG1218
->- 5K-W20 (USB)
->- OYE-001 (USB)
->- NEWIFI-MINI (USB)
->- MI-MINI (USB)
->- MI-3 (USB)
->- MI-R3G (USB)
->- HC5661A
->- HC5761A (USB)
->- HC5861B
+>- [srelay]socks4/5服务器(https://socks-relay.sourceforge.io) ```CONFIG_FIRMWARE_INCLUDE_SRELAY```
+>- [3proxy]代理服务器(https://github.com/z3APA3A/3proxy) ```CONFIG_FIRMWARE_INCLUDE_3PROXY```
+>- [frpc]反向代理(https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPC```
+>- [frps]反向代理(https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPS```
+>- [tunsafe]WireGuard客户端(https://github.com/TunSafe/TunSafe) ```CONFIG_FIRMWARE_INCLUDE_TUNSAFE```
+>- [wireguard-go]WireGuard/GO语言(https://git.zx2c4.com/wireguard-go/) ```CONFIG_FIRMWARE_INCLUDE_WIREGUARD```
+
+- 已适以下机型
 >- 360P2 (USB)
->- MI-NANO
->- MZ-R13
->- MZ-R13P
->- RT-AC1200GU (USB)
->- XY-C1 (USB)
->- WR1200JS (USB)
->- NEWIFI3 (USB)
->- B70 (USB)
+>- 5K-W20 (USB)
 >- A3004NS (USB)
->- K2P
->- K2P-USB (USB)
->- JCG-836PRO (USB)
->- JCG-AC860M (USB)
->- DIR-882 (USB)
->- DIR-878
+>- B70 (USB)
+>- DIR-882 (USB) / DIR-878
+>- E8820V2(USB)
+>- HC5661A / HC5761A (USB) / HC5861B
+>- JCG-836PRO (USB) / JCG-AC860M (USB) / JCG-Y2(USB)
+>- K2P / K2P-USB (USB)
+
+>- MI-MINI (USB) / MI-3 (USB) /MI-R3G (USB) / MI-NANO
 >- MR2600 (USB)
->- WDR7300
+>- MZ-R13 / MZ-R13P
+>- MSG1500(USB)
+>- NEWIFI-MINI (USB) / NEWIFI3 (USB)
+
+>- OYE-001 (USB)
+>- PSG1208 / PSG1218
 >- RM2100
 >- R2100
->- JCG-Y2(USB)
->- E8820V2(USB)
->- MSG1500(USB)
+>- RT-AC1200GU (USB)
+
+>- WR1200JS (USB)
+>- WDR7300
+>- XY-C1 (USB)
 
 ***
 
@@ -173,22 +167,22 @@ sh dl_toolchain.sh
 
 ```
 
-* (可选) 修改机型配置文件
-
+* (可选) 用nano编辑器修改配置文件（例如：编译 PSG1218路由固件）
+# PSG1218 为路由型号，自己修改为自己的路由，他路由名称在trunk/configs/templates/中
 ```shell
 nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
 ```
 
-* 清理代码树并开始编译
+* 清理代码树并开始编译（例如：编译 PSG1218路由固件）
 
 ```shell
 cd /opt/rt-n56u/trunk
 ./clear_tree
 # 对于WSL环境，建议使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot
 fakeroot ./build_firmware_modify PSG1218
-# 脚本第一个参数为路由型号，在trunk/configs/templates/中
-# 编译好的固件在trunk/images里
+
 ```
+* 编译好的固件在trunk/images里
 
 ***
 
