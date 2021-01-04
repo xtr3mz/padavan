@@ -6,8 +6,8 @@
 
 Welcome to the rt-n56u project
 This project aim to improve rt-n56u like routers's user experience with many addons and improvements.
-Use At Your Own Risk. 
-Contributors of this project are not responsible for what happens next.
+Use At Your Own Risk. Contributors are not responsible for what happens next.
+
 本项目意为改善 rt-n56u 类似型号路由器的使用体验，提供了插件和功能改进。
 总而言之，我们的意图是好的，但是，刷机风险自担（首先确保你刷了breed）。
 
@@ -21,16 +21,14 @@ Contributors of this project are not responsible for what happens next.
 ### 特别说明 ###
 * 汉化字典来自：https://github.com/gorden5566/padavan
 * 更新日志：https://www.jianshu.com/p/d76a63a12eae
-
+* 使用[gorden5566](https://github.com/gorden5566/padavan)的汉化字典
+* aria2 前端管理更换为[AriaNg](https://github.com/mayswind/AriaNg)
+* [curl](https://github.com/curl/curl)可选编译可执行程序 ```CONFIG_FIRMWARE_INCLUDE_CURL```
+* 使用了[PROMETHEUS](http://pm.freize.net/index.html)提供的部分补丁
+* 使用了[Linaro1985/padavan-ng](https://gitlab.com/padavan-ng/padavan-ng)的部分软件包
 ***
 
 ### 固件特点 ###
-- 使用[gorden5566](https://github.com/gorden5566/padavan)的汉化字典
-- aria2前端更换为[AriaNg](https://github.com/mayswind/AriaNg)
-- [curl](https://github.com/curl/curl)可选编译可执行程序 ```CONFIG_FIRMWARE_INCLUDE_CURL```
-- 使用了[PROMETHEUS](http://pm.freize.net/index.html)提供的部分补丁
-- 使用了[Linaro1985/padavan-ng](https://gitlab.com/padavan-ng/padavan-ng)的部分软件包
-
 - 可选插件 - 登录客户端：
 >- [scutclient]校园网(https://github.com/hanwckf/scutclient) ```CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT```
 >- [mentohust]锐捷认证(https://github.com/hanwckf/mentohust-1) ```CONFIG_FIRMWARE_INCLUDE_MENTOHUST```
@@ -167,8 +165,8 @@ sh dl_toolchain.sh
 
 ```
 
+* 以下代码中的 PSG1218 为路由型号，请修改为自己的路由型号，型号在trunk/configs/templates/中查找
 * (可选) 用nano编辑器修改配置文件（例如：编译 PSG1218路由固件）
-# PSG1218 为路由型号，自己修改为自己的路由，他路由名称在trunk/configs/templates/中
 ```shell
 nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
 ```
@@ -186,7 +184,7 @@ fakeroot ./build_firmware_modify PSG1218
 
 ***
 
-### 请参阅 ###
+### 编译步骤请参阅 ###
 - https://www.jianshu.com/p/cb51fb0fb2ac
 - https://www.jianshu.com/p/6b8403cdea46
 
