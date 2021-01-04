@@ -184,6 +184,7 @@ cd /opt/rt-n56u/trunk
 * 开始编译（例如：编译 PSG1218路由固件）
 ```shell
 # 对于WSL环境，建议使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot
+cd /opt/rt-n56u/trunk
 fakeroot ./build_firmware_modify PSG1218
 
 ```
