@@ -22,7 +22,7 @@
 * 使用了[Linaro1985/padavan-ng](https://gitlab.com/padavan-ng/padavan-ng)的部分软件包
 ***
 
-### 可选插件 ###
+### 可选插件(可不装，不影响基本功能) ###
 配置文件内修改，文件在/opt/rt-n56u/trunk/configs/templates/(你的路由型号).config
 - 工具1：
 >- KMS /地址已丢失 [vlmcsd] (https://github.com/hanwckf/vlmcsd) ```CONFIG_FIRMWARE_INCLUDE_VLMCSD```
@@ -30,7 +30,6 @@
 >- IPV6端口转发 [napt66](https://github.com/mzweilin/napt66) ```CONFIG_FIRMWARE_INCLUDE_NAPT66```
 >- Aria2 HTTP/BT 下载工具
 >- Transmission BT 下载工具
->- QOS ```CONFIG_FIRMWARE_INCLUDE_QOS```
 
 - 工具2：
 >- 限速 ```CONFIG_FIRMWARE_INCLUDE_IMQ/IFB```
