@@ -102,7 +102,7 @@ Use At Your Own Risk. Contributors are not responsible for what happens next.
 * 安装依赖包
 
 ```shell
-# Debian/Ubuntu
+# Debian/Ubuntu/Deepin深度
 sudo apt update
 sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
 	fakeroot kmod cpio git python-docutils gettext automake autopoint \
@@ -156,7 +156,9 @@ git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56
 ```shell
 cd /opt/rt-n56u/toolchain-mipsel
 
-# （推荐）使用脚本下载预编译的工具链：
+# （推荐）下载工具链：
+# 注意：github下载慢的，打开dl_toolchain.sh，从源码中地址下载 /toolchain-mipsel/mipsel-linux-uclibc.tar.xz到本地，然后执行mkdir和tar
+
 sh dl_toolchain.sh
 
 # 或者，也可以从源码编译工具链，这需要一些时间：
