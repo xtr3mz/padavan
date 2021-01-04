@@ -465,10 +465,9 @@ var menuL1=[
 	//{"title":"Aria","link":"./ariaweb/index.html","icon":"icon-hdd"},
 	//{"title":"","link":"","icon":"icon-retweet"},
 	//{"title":"","link":"","icon":"icon-globe"},
-	{"title":"<#menu4#>","link":"Main_TrafficMonitor_realtime.asp","icon":"icon-tasks"},
 	{"title":"<#menu5_8#>","link":"Advanced_System_Info.asp","icon":"icon-random","sub":"log"},
 	{"title":"<#menu5#>","link":"as.asp","icon":"icon-wrench","sub":"adv"},
-	{"title":"插件","link":"javascript:;","icon":"icon-wrench","sub":"plugin"}
+	{"title":"插件","link":"javascript:;","icon":"icon-tasks","sub":"plugin"}
 ];
 //Level 2 Menu
 var menuL2=[
@@ -481,7 +480,8 @@ var menuL2=[
 	{"title":"<#menu5_6#>","link":tabM[6][0].link,"sub":"adv"},
 	{"title":"<#menu5_10#>","link":tabM[7][0].link,"sub":"adv"},
 	{"title":"<#menu5_9#>","link":support_2g_radio() ? tabM[8][0].link : "Main_EStatus_Content.asp","sub":"log"},
-	{"title":"<#menu5_7#>","link":tabM[9][0].link,"sub":"log"}
+	{"title":"<#menu5_7#>","link":tabM[9][0].link,"sub":"log"},
+	{"title":"<#menu4#>","link":"Main_TrafficMonitor_realtime.asp","sub":"log"}
 ];
 
 /* plugin menu 插件菜单 */
@@ -1379,55 +1379,7 @@ function removeFromLocalStorage(name){
 }
 
 function mobilestyle(){
-var sc = document.createElement("meta");sc.setAttribute("name", "viewport");sc.setAttribute("content", "width=device-width, initial-scale=1, user-scalable=yes");document.head.appendChild(sc);
-var style=document.createElement('style');
-style.type='text/css';
-style.innerHTML="#mainMenu li>i{margin:0 5px 0 0}"
-+".side_nav ul li>a{background:transparent !important;color:#08c !important;border:none !important;box-shadow:inset -1px -1px 1px #ccc}"
-+".side_nav ul li>a:hover{background:#ddd !important}"
-+".side_nav ul li div a{background:#fff}"
-+"#subMenu{display:none}"
-+"@media screen and (max-width:800px){"
-+"#mainMenu .accordion{display:none}"
-+"#subMenu{display:block}"
-+"#loadingBlock{margin-top:50px !important}"
-+".wrapper{width:100%}"
-+".wrapper>.container-fluid,.wrapper>form>.container-fluid{padding:0 5px 5px 5px;margin:0}"
-+".container-fluid{padding:none}"
-+"#TopBanner .span6{width:auto;float:none;margin:5px;}"
-+"#TopBanner .container-fluid{padding:0;margin:0}"
-+"#logo{height:50px;margin:-5px auto -18px auto;}"
-+".row-fluid>.span3,.row-fluid>.span9{float:none;width:auto;margin:0}"
-//*menu*/
-+".sidebar-nav.side_nav,#mainMenu{padding:none;background:none}"
-+"#mainMenu{margin:-22px 0 10px 0;list-style:none;background:none repeat scroll 0 0 #F5F5F5}"
-+"#mainMenu li {float: left; width:50%;}"
-+"#mainMenu li a{border-radius:none;display:block;line-height:30px;text-align:center}"
-+"#subMenu{clear:both;background:none}"
-+"#subMenu a{display:block;height:30px;overflow:hidden;float:left;width:33.3%;padding:0;line-height:30px}"
-//*body menu*/
-+".row-fluid .span9{float:none;width:auto;margin:0}"
-+".row-fluid>.span2{float:none;width:auto;height:auto}"
-+".row-fluid .span10{float:none;width:auto;margin:0}"
-+"#menu_body.sitemap .nav-list{padding:0}"
-+"#menu_body.sitemap .nav-list>li>a{margin:0;padding:0}"
-+"#menu_body.sitemap table{font-size:0.9em;}"
-+"#menu_body.sitemap table td{padding:3px}"
-+"#menu_body.sitemap table td li{line-height:22px}"
-+".chart-parent{width:100%;overflow:scroll}"
-//tabM devs
-+".row-fluid>.span2>.well{height:50px !important;padding:0 !important}"
-+".quickmenu{padding:0 !important;margin:5px 0;position:relative;}"
-+".quickmenu .sub{float:left;width:20%;position:relative}"
-+".quickmenu .badge{margin:0 10px 0 -30px}"
-+".big-icons,.big-ss {width: 35px !important;height: 35px !important;background-size:35px;}"
-+"#iconInternet{background-position:0 0 !important}"
-+"#iconRouter{background-position:0 -165px !important}"
-+"#iconClient{background-position:0 -82px !important}"
-+"#iconUSBdisk0{background-position:0 -333px !important}"
-+"}";
-document.getElementsByTagName('head')[0].appendChild(style);
-
+	var sc = document.createElement("meta");sc.setAttribute("name", "viewport");sc.setAttribute("content", "width=device-width, initial-scale=1, user-scalable=yes");document.head.appendChild(sc);
 	$j = jQuery.noConflict();
 	setTimeout(function(){
 		if($j(window).width()<800){//body 加载晚
@@ -1435,7 +1387,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
 			$j('.table-big tr').each(function(){
 				var o=$j(this);
 				qc+='<div class="sub" id="'+o.attr('id')+'" style="'+o.attr('style')+'">'+$j('td',o).html()+'</div>';
-				console.log('111');
 			});
 			$j('<div class="quickmenu">'+qc+'</div>').insertBefore("#tabMenu");
 			$j('.table-big').remove();
