@@ -23,20 +23,17 @@
 ***
 
 ### 可选插件 ###
--  登录客户端：
->- 校园网[scutclient](https://github.com/hanwckf/scutclient) ```CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT```
->- 锐捷认证[mentohust](https://github.com/hanwckf/mentohust-1) ```CONFIG_FIRMWARE_INCLUDE_MENTOHUST```
->- r.com[gdut-drcom]D(https://github.com/chenhaowen01/gdut-drcom) ```CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM```
->- Dr.com[dogcom](https://github.com/hanwckf/dogcom) ```CONFIG_FIRMWARE_INCLUDE_DOGCOM```
->- EAP[minieap](https://github.com/hanwckf/minieap) ```CONFIG_FIRMWARE_INCLUDE_MINIEAP```
->- 南京工程 /地址已丢失 [njit-client](https://github.com/hanwckf/njit8021xclient) ```CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT```
-
+配置文件内修改，文件在/opt/rt-n56u/trunk/configs/templates/(你的路由型号).config
 - 工具1：
 >- KMS /地址已丢失[vlmcsd] (https://github.com/hanwckf/vlmcsd) ```CONFIG_FIRMWARE_INCLUDE_VLMCSD```
 >- 局域网共享文件[samba3.6](https://gitlab.com/padavan-ng/padavan-ng/tree/master/trunk/user/samba36) ```CONFIG_FIRMWARE_INCLUDE_SMBD36```
 >- IPV6端口转发[napt66](https://github.com/mzweilin/napt66) ```CONFIG_FIRMWARE_INCLUDE_NAPT66```
+>- Aria2 HTTP/BT 下载工具
+>- Transmission BT 下载工具
+>- QOS ```CONFIG_FIRMWARE_INCLUDE_QOS```
 
 - 工具2：
+>- 限速 ```CONFIG_FIRMWARE_INCLUDE_IMQ/IFB```
 >- Webshell[ttyd](https://github.com/tsl0922/ttyd) ```CONFIG_FIRMWARE_INCLUDE_TTYD```
 >- 兼容x/y/zmodem/文件传输[lrzsz](https://ohse.de/uwe/software/lrzsz.html) ```CONFIG_FIRMWARE_INCLUDE_LRZSZ```
 >- 进程查看[htop](https://hisham.hm/htop/releases/) ```CONFIG_FIRMWARE_INCLUDE_HTOP```
@@ -44,6 +41,14 @@
 >- 文本编辑器[nano](https://www.nano-editor.org/dist/) ```CONFIG_FIRMWARE_INCLUDE_NANO```
 >- 网络性能测试[iperf3](https://github.com/esnet/iperf) ```CONFIG_FIRMWARE_INCLUDE_IPERF3```
 >- 多功能网络工具[socat](http://www.dest-unreach.org/socat) ```CONFIG_FIRMWARE_INCLUDE_SOCAT```
+
+-  登录客户端：
+>- 校园网[scutclient](https://github.com/hanwckf/scutclient) ```CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT```
+>- 锐捷认证[mentohust](https://github.com/hanwckf/mentohust-1) ```CONFIG_FIRMWARE_INCLUDE_MENTOHUST```
+>- Dr.com[gdut-drcom]D(https://github.com/chenhaowen01/gdut-drcom) ```CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM```
+>- Dr.com[dogcom](https://github.com/hanwckf/dogcom) ```CONFIG_FIRMWARE_INCLUDE_DOGCOM```
+>- EAP[minieap](https://github.com/hanwckf/minieap) ```CONFIG_FIRMWARE_INCLUDE_MINIEAP```
+>- 南京工程 /地址已丢失 [njit-client](https://github.com/hanwckf/njit8021xclient) ```CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT```
 
 - 无线电：
 >- Mode S解码器[dump1090](https://github.com/hanwckf/dump1090) ```CONFIG_FIRMWARE_INCLUDE_DUMP1090```
