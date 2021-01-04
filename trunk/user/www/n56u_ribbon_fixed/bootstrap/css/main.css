@@ -614,10 +614,19 @@ textarea[readonly] {
     border-radius: 3px 0 0 3px;
 }
 
-/* mobile patch */
+/* patch */
+.alertX{
+  padding: 10px;
+  margin:30px 10px 10px 10px;
+  border: 1px solid #bce8f1;
+  border-radius: 4px;
+  max-width: 400px;
+  text-align:left;
+  background:#FEFEFE;
+}
 #mainMenu li>i{margin:0 5px 0 0}
 #subMenu{display:none}
-
+/* mobile patch */
 @media screen and (max-width:800px){
 #mainMenu .accordion{display:none}
 #subMenu{display:block}
