@@ -157,7 +157,8 @@ git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56
 cd /opt/rt-n56u/toolchain-mipsel
 
 # （推荐）下载工具链：
-# 注意：github下载慢的，打开dl_toolchain.sh源码
+# 注意：github下载慢的，提前下载/trunk/user/chnroute 及 gfwlist ，及工具链
+* 打开dl_toolchain.sh源码
 # 从源码中地址下载 mipsel-linux-uclibc.tar.xz到本地，然后执行源码中的mkdir和tar
 
 sh dl_toolchain.sh
