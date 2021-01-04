@@ -179,7 +179,7 @@ nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
 * 新装系统需要设root密码，输入 sudo passwd，输入2次密码即可
 * root模式文件浏览器，在命令窗口输入：
 * debian/ubuntu： sudo nautilus
-* deepin/深度系统： su -> 输入设的密码 -> dde-file-manager
+* deepin/深度系统：sudo dde-file-manager
 * 打开系统盘（ubuntu: 其他位置->我的电脑），找到opt即可看到rt-n56u文件夹
 
 * 清理并开始编译（例如：编译 PSG1218路由固件）
