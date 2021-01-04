@@ -1,4 +1,5 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
+
 以下整理自hanwckf的padavan
 
 ![CI](https://github.com/hanwckf/rt-n56u/workflows/CI/badge.svg)
@@ -104,46 +105,12 @@
 * 安装依赖包
 
 ```shell
-# Debian/Ubuntu/Deepin深度（推荐）
+# Debian/Ubuntu/Deepin深度
 sudo apt update
 sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
 	fakeroot kmod cpio git python-docutils gettext automake autopoint \
 	texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
 	libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
-
-# Archlinux/Manjaro
-sudo pacman -Syu --needed git base-devel cmake gperf ncurses libmpc \
-        gmp python-docutils vim rpcsvc-proto fakeroot cpio help2man
-
-# Alpine
-sudo apk add make gcc g++ cpio curl wget nano xxd kmod \
-	pkgconfig rpcgen fakeroot ncurses bash patch \
-	bsd-compat-headers python2 python3 zlib-dev \
-	automake gettext gettext-dev autoconf bison \
-	flex coreutils cmake git libtool gawk sudo
-
-# CentOS 7
-sudo yum update
-sudo yum groupinstall "Development Tools"
-sudo yum install ncurses-* flex byacc bison zlib-* texinfo gmp-* mpfr-* gettext \
-	libtool* libmpc-* gettext-* python-docutils nano help2man fakeroot
-
-# CentOS 8
-sudo yum update
-sudo yum groupinstall "Development Tools"
-sudo yum install ncurses-* flex byacc bison zlib-* gmp-* mpfr-* gettext \
-	libtool* libmpc-* gettext-* nano fakeroot
-
-# CentOS 8不能直接通过yum安装texinfo，help2man，python-docutils。请去官网下载发行的安装包编译安装
-# 以texinfo为例
-# cd /usr/local/src
-# sudo wget http://ftp.gnu.org/gnu/texinfo/texinfo-6.7.tar.gz
-# sudo tar zxvf texinfo-6.7.tar.gz
-# cd texinfo-6.7
-# sudo ./configure
-# sudo make
-# sudo make install
-
 ```
 
 * 克隆源码
@@ -155,21 +122,20 @@ git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56
 ```
 
 * 准备工具链
-
+* 方法1.下载工具链：（需要代理）
 ```shell
 cd /opt/rt-n56u/toolchain-mipsel
-
-# （推荐）下载工具链：
-# 注意：github下载慢的，提前下载/trunk/user/chnroute 及 gfwlist ，及工具链
-* 打开dl_toolchain.sh源码
-# 从源码中地址下载 mipsel-linux-uclibc.tar.xz到本地，然后执行源码中的mkdir和tar
-
 sh dl_toolchain.sh
+```
+* 方法2. 用软件下载（较快）
+* 注意：github下载慢的，提前下载
+* 1) chnroute 及 gfwlist，地址见 /trunk/user/下各自文件夹内makefile源码
+* 2) 打开dl_toolchain.sh源码, 从源码中地址下载 mipsel-linux-uclibc.tar.xz到本地，然后执行源码中的mkdir和tar
 
-# 如果文件下不了，就自己编译，需要一些时间：（虚拟机4核，编译耗时98分）
+* 方法3. 自己编译工具链（虚拟机下，4核，编译耗时98分）###
+```shell
 ./clean_toolchain
 ./build_toolchain
-
 ```
 
 * 请将 (你的路由型号) 修改为自己的路由型号，具体型号在trunk/configs/templates/中找
