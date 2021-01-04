@@ -168,7 +168,7 @@ sh dl_toolchain.sh
 ```shell
 nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
 ```
-#root下，图形界面编辑文件
+# 图形界面管理 & 编辑文件（root模式）
 * 新装系统需要设root密码，输入 sudo passwd，输入2次密码即可
 * root模式文件浏览器，在命令窗口输入：
 * debian/ubuntu： sudo nautilus
