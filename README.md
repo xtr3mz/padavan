@@ -163,7 +163,7 @@ cd /opt/rt-n56u/toolchain-mipsel
 
 sh dl_toolchain.sh
 
-# 如果文件下不了，就自己编译，需要一些时间：
+# 如果文件下不了，就自己编译，需要一些时间：（虚拟机4核编译时间98分）
 ./clean_toolchain
 ./build_toolchain
 
