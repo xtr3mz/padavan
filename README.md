@@ -163,17 +163,16 @@ cd /opt/rt-n56u/toolchain-mipsel
 
 sh dl_toolchain.sh
 
-# 如果文件下不了，就自己编译，需要一些时间：（虚拟机4核编译时间98分）
+# 如果文件下不了，就自己编译，需要一些时间：（虚拟机4核，编译耗时98分）
 ./clean_toolchain
 ./build_toolchain
 
 ```
 
-* 以下代码中的 PSG1218 为路由型号
-* 请将 PSG1218 修改为自己的路由型号，具体型号在trunk/configs/templates/中找
-* (可选) 用nano编辑器修改配置文件（例如：编译 PSG1218路由固件）
+* 请将 (你的路由型号) 修改为自己的路由型号，具体型号在trunk/configs/templates/中找
+* (可选) 用nano编辑器修改配置文件
 ```shell
-nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
+nano /opt/rt-n56u/trunk/configs/templates/(你的路由型号).config
 ```
 * 清理文件（首次编译无需清理，换路由器型号，需要清理）
 ```shell
@@ -181,12 +180,14 @@ cd /opt/rt-n56u/trunk
 ./clear_tree
 ```
 
-* 开始编译（例如：编译 PSG1218路由固件）
+* 开始编译
 ```shell
 # 对于WSL环境，建议使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot
 cd /opt/rt-n56u/trunk
+fakeroot ./build_firmware_modify (你的路由型号)
+# 例如
 fakeroot ./build_firmware_modify PSG1218
-
+fakeroot ./build_firmware_modify NEWIFI3
 ```
 * 编译好的固件在trunk/images里
 
