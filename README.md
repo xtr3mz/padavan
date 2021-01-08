@@ -2,7 +2,7 @@
 
 鉴于此固件用aria2经常崩溃，崩溃直接卡死只能拔电源，本人弃坑，不用aria2和padavan，不再更新
 
-可能是watchdog问题，开了2-3小时，关了能用半天，可能里面缺少mtk 重启设置所致，在老外网站见过mtk补丁
+可能是watchdog问题，开了2-3小时，关了能用半天
 
 ![image](https://github.com/xtr3mz/padavan/raw/master/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
 
