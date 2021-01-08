@@ -1,5 +1,7 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
-鉴于此固件用aria2经常崩溃，崩溃直接卡死，本人弃坑，不用aria2和padavan
+
+鉴于此固件用aria2经常崩溃，崩溃直接卡死，本人弃坑，不用aria2和padavan，不再更新
+
 ![image](https://github.com/xtr3mz/padavan/raw/master/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
 
 
