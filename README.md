@@ -1,18 +1,18 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
+原固件bug 死机重启会卡住，只能拔电源，所以我也不用了
 
-修改文件如下，可自行添加
+### 修改文件如下，可自行添加 ###
+* /state.js（中间菜单，和末尾mobilestyle ）
+* /bootstrap/main.css (末尾 media screen)
+* /nologin.html
+* /login.html
 
-*/state.js（中间菜单，和末尾mobilestyle ）
-*/bootstrap/main.css (末尾 media screen)
-*/nologin.html
-*/login.html
-
-效果图
+### 效果图 ###
 
 ![image](https://github.com/xtr3mz/padavan/raw/master/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
 
 
-以下整理自hanwckf的padavan
+###以下整理自hanwckf的padavan###
 
 ![CI](https://github.com/hanwckf/rt-n56u/workflows/CI/badge.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/hanwckf/rt-n56u/total)
