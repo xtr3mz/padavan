@@ -1,8 +1,13 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
 
-鉴于此固件用aria2经常崩溃，崩溃直接卡死，只能拔电源
+修改文件如下，可自行添加
 
-本人弃坑，不用aria2和padavan，不再更新
+*/state.js（中间菜单，和末尾mobilestyle ）
+*/bootstrap/main.css (末尾 media screen)
+*/nologin.html
+*/login.html
+
+效果图
 
 ![image](https://github.com/xtr3mz/padavan/raw/master/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
 
