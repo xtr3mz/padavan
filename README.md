@@ -1,7 +1,10 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
+
 原固件bug 死机重启会卡住，只能拔电源，所以我也不用了
 
 ### 修改文件如下，可自行添加 ###
+/trunk/user/www/n56u_ribbon_fixed
+
 * /state.js（中间菜单，和末尾mobilestyle ）
 * /bootstrap/main.css (末尾 media screen)
 * /nologin.html
