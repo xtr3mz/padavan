@@ -1,6 +1,6 @@
 本人的Release中的文件为Newifi3 d2的固件！仅有这个
 
-原固件bug 死机重启会卡住，只能拔电源，所以我也不用了
+padavan目前死机时会卡住，只能拔电源，所以我也不用了，换了pandorabox
 
 ### 修改文件如下，可自行添加 ###
 /trunk/user/www/n56u_ribbon_fixed
